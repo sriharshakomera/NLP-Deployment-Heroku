@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <!-- link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+	<link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/background.css') }}">
+	<link href="F:\\Krish\\NLP\\Spam Classifier\\static\\css\\background.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+	<div class="message">
+		<header>
+			<div class="container">
+				<div id="brandname">
+					ML App
+				</div>
+				<h2>Spam Detector For SMS Messages</h2>
+		
+			</div>
+	
+		</header>
+	</div>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Comment</b></p>
+	<div class="results">		
+		{% if prediction == 1%}
+		<h2 style="color:red;">Spam</h2>
+		{% elif prediction == 0%}
+		<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
+		{% endif %}
+
+	</div>
+</div>
+</body>
+</html>
